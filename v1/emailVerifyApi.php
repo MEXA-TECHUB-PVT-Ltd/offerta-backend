@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     if (!empty($data->email) && !empty($data->code)) {
     $user_obj->email=$data->email;
     $user_obj->code=$data->code;
-    if(!empty($row=$user_obj->searchByEmail())){
+    if(!empty($row=$user_obj->searchByEmail2())){
         $code=$row["email_code"];
         if ($code == $user_obj->code) {
             if ($user_obj->emailStatus()) {

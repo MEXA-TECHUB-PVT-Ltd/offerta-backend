@@ -10,9 +10,7 @@ header("Content-type:application/json; charst= UTF-8");
 // file include
 include_once("../config/database.php");
 include_once("../classes/User.php");
-require_once "../Labraries/PHPMailer/PHPMailer.php";
-require_once "../Labraries/PHPMailer/SMTP.php";
-require_once "../Labraries/PHPMailer/Exception.php";
+require '../Labraries/vendor/autoload.php';
 
 // object
 $db= new Database();

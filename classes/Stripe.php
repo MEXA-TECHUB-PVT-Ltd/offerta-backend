@@ -35,6 +35,14 @@ class Stripe{
 
         return false;
     }
+    public function keys(){
+        $query = "SELECT * FROM admin ";
+        $result = mysqli_query($this->conn, $query);
+        if ($result) {
+           return mysqli_fetch_assoc($result);
+        }
+        return array();
+    }
     public function selectAllStripe(){
         $query = "SELECT stripe_credentials.id,stripe_credentials.private_key,stripe_credentials.public_key,logins.full_name FROM stripe_credentials LEFT JOIN logins ON stripe_credentials.user_id = logins.id ";
         

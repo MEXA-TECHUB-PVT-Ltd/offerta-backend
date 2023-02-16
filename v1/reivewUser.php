@@ -22,22 +22,36 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         $user_obj->reviewed_user_id=$data->reviewed_user_id;
         $user_obj->review=$data->review;
         if ($user_obj->checkReview()) {
+            $user_obj->id = $user_obj->user_id;
+            $row = $user_obj->users();
+            $user_obj->id = $user_obj->reviewed_user_id;
+            $row2 = $user_obj->users();
             http_response_code(200);
             echo json_encode(array(
             "status"=>false,
-            "msg"=>"User Already reviewed"
+            "msg"=>"User Already reviewed",
+                "user"=>$row,
+                "reviewed_user_id"=>$row2
         ));
         }elseif ($row=$user_obj->reviewUser()) {
+            $user_obj->id = $user_obj->user_id;
+            $row = $user_obj->users();
+            $user_obj->id = $user_obj->reviewed_user_id;
+            $row2 = $user_obj->users();
             http_response_code(200);
             echo json_encode(array(
             "status"=>true,
-            "Message"=>"Review Created"
+            "Message"=>"Review Created",
+            "data"=>array(
+                "user"=>$row,
+                "reviewed_user_id"=>$row2
+            )
         ));
         }else {
             http_response_code(200);
             echo json_encode(array(
             "status"=>false,
-            "msg"=>"failed to create review"
+            "msg"=>"failed to create review",
         ));
         }
     

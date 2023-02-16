@@ -92,138 +92,11 @@ class Filter{
     
         return array();
     }
-    public function sevenDaysAgo(){
-        $query = "SELECT * FROM ".$this->listing." ";
-        $result = mysqli_query($this->conn, $query);
-        if ($result) {
-            // $r = mysqli_fetch_assoc($result);
-            $rows = array();
-            while ($r = mysqli_fetch_assoc($result)) {
-                $created_at=$r["created_at"];
-                $postTiming = date("Y-m-d", strtotime($created_at));
-                $time = strtotime(date(("Y-m-d")));
-                $now = date("Y-m-d", strtotime("0 day", $time));
-                $sevenDaysAgo = date("Y-m-d", strtotime("-7 day", $time));
-                if ($postTiming <= $now && $postTiming >=$sevenDaysAgo) {
-                    $id = $r["id"];
-                    $user_id = $r["user_id"];
-                    $title = $r["title"];
-                    $description = $r["description"];
-                    $price = $r["price"];
-                    $location = $r["location"];
-                    $product_condition = $r["product_condition"];
-                    $exchange = $r["exchange"];
-                    $fixed_price = $r["fixed_price"];
-                    $giveaway = $r["giveaway"];
-                    $shipping_cost = $r["shipping_cost"];
-                    $sold = $r["sold"];
-                    $youtube_link = $r["youtube_link"];
-                    $created_at = $r["created_at"];
-                    $category = $r["category_id"];
-                    $subcategory = $r["subcategory_id"];
-                $query2 = "SELECT * FROM product_images WHERE product_id = '$id'";
-                    $result2 = mysqli_query($this->conn, $query2);
-                    $rows2 = array();
-                    while ($r2 = mysqli_fetch_assoc($result2)) {
-                        $img = $r2["image"];
-                        $rows2[] = $img;
-                    }     
-                    $data= array(
-                        "id"=>$id,
-                        "user_id"=>$user_id,
-                        "title"=>$title,
-                        "description"=>$description,
-                        "price"=>$price,
-                        "location"=>$location,
-                        "product_condition"=>$product_condition,
-                        "exchange"=>$exchange,
-                        "fixed_price"=>$fixed_price,
-                        "giveaway"=>$giveaway,
-                        "shipping_cost"=>$shipping_cost,
-                        "sold"=>$sold,
-                        "youtube_link"=>$youtube_link,
-                        "created_at"=>$created_at,
-                        "category_id"=>$category,
-                        "sub_category_id"=>$subcategory,
-                        "images"=>$rows2
-                );
-                    $rows[] = $data;
-                }
-            }
-            return $rows;
-        }
-    
-        return array();
-    }
-    public function oneMonthAgo(){
-        $query = "SELECT * FROM ".$this->listing." ";
-        $result = mysqli_query($this->conn, $query);
-        if ($result) {
-            // $r = mysqli_fetch_assoc($result);
-            $rows = array();
-            while ($r = mysqli_fetch_assoc($result)) {
-                $created_at=$r["created_at"];
-                $postTiming = date("Y-m-d", strtotime($created_at));
-                $time = strtotime(date(("Y-m-d")));
-                $now = date("Y-m-d", strtotime("0 day", $time));
-                $sevenDaysAgo = date("Y-m-d", strtotime("-30 day", $time));
-                if ($postTiming <= $now && $postTiming >=$sevenDaysAgo) {
-                    $id = $r["id"];
-                    $user_id = $r["user_id"];
-                    $title = $r["title"];
-                    $description = $r["description"];
-                    $price = $r["price"];
-                    $location = $r["location"];
-                    $product_condition = $r["product_condition"];
-                    $exchange = $r["exchange"];
-                    $fixed_price = $r["fixed_price"];
-                    $giveaway = $r["giveaway"];
-                    $shipping_cost = $r["shipping_cost"];
-                    $sold = $r["sold"];
-                    $youtube_link = $r["youtube_link"];
-                    $created_at = $r["created_at"];
-                    $category = $r["category_id"];
-                    $subcategory = $r["subcategory_id"];
-                $query2 = "SELECT * FROM product_images WHERE product_id = '$id'";
-                    $result2 = mysqli_query($this->conn, $query2);
-                    $rows2 = array();
-                    while ($r2 = mysqli_fetch_assoc($result2)) {
-                        $img = $r2["image"];
-                        $rows2[] = $img;
-                    }     
-                    $data= array(
-                        "id"=>$id,
-                        "user_id"=>$user_id,
-                        "title"=>$title,
-                        "description"=>$description,
-                        "price"=>$price,
-                        "location"=>$location,
-                        "product_condition"=>$product_condition,
-                        "exchange"=>$exchange,
-                        "fixed_price"=>$fixed_price,
-                        "giveaway"=>$giveaway,
-                        "shipping_cost"=>$shipping_cost,
-                        "sold"=>$sold,
-                        "youtube_link"=>$youtube_link,
-                        "created_at"=>$created_at,
-                        "category_id"=>$category,
-                        "sub_category_id"=>$subcategory,
-                        "images"=>$rows2
-                );
-                    $rows[] = $data;
-                }
-            }
-            return $rows;
-        }
-    
-        return array();
-    }
     public function allProduct(){
-            $query = "SELECT * FROM ".$this->listing." WHERE user_id = '$this->user_id'";
+            $query = "SELECT * FROM ".$this->listing." WHERE user_id = '$this->user_id' ORDER BY created_at DESC";
             $result = mysqli_query($this->conn, $query);
             if ($result) {
                 if (mysqli_num_rows($result) >0) {
-                $rows2 = array();
                 while($r = mysqli_fetch_assoc($result)){
                 $data = array();
                 $id = $r["id"];
@@ -264,6 +137,7 @@ class Filter{
             }else{
             $category_name = $r3["name"] ;
             }
+                        $rows2 = array();
                         $query2 = "SELECT * FROM product_images WHERE product_id = '$id'";
                         $result2 = mysqli_query($this->conn, $query2);
                         while ($r2 = mysqli_fetch_assoc($result2)) {
@@ -389,59 +263,99 @@ class Filter{
             return array();
         }
     public function InsightList(){
-        $data = array();
-        $query = "SELECT * FROM ".$this->offers_table." WHERE listing_id = '$this->listing_id'";
-        $result = mysqli_query($this->conn, $query);
-        if ($result) {
-            $rows = array();
-            $totaloffers = mysqli_num_rows($result);
-            while ($r = mysqli_fetch_assoc($result)) {
-                $offers = array("offers"=>$r);
-                    $rows[] = $offers;
-            }
-            $query2 = "SELECT * FROM ".$this->likes_table." WHERE list_id = '$this->listing_id'";
-            $result2 = mysqli_query($this->conn, $query2);
-            if ($result2) {
-                $rows2 = array();
-                $totalLiked = mysqli_num_rows($result2);
-                while ($r2 = mysqli_fetch_assoc($result2)) {
-                    $LikesByUser = array("User_liked"=>$r2,
-                );
-                        $rows2[] = $LikesByUser;
-                }
-            }
-            $query3 = "SELECT * FROM ".$this->exchange_table." WHERE item2 = '$this->listing_id'";
-            $result3 = mysqli_query($this->conn, $query3);
-            if ($result3) {
-                $rows3 = array();
-                $total_exchange_request = mysqli_num_rows($result3);
-                while ($r3 = mysqli_fetch_assoc($result3)) {
-                    $exchange_request = array("exchange_request"=>$r3,
-                );
-                        $rows3[] = $exchange_request;
-                }
-            }
-            $query4 = "SELECT * FROM comments WHERE listing_id = '$this->listing_id'";
-            $result4 = mysqli_query($this->conn, $query4);
-            if ($result4) {
-                $rows4 = array();
-                $total_comments = mysqli_num_rows($result4);
-                while ($r4 = mysqli_fetch_assoc($result4)) {
-                    $comments = array("comment"=>$r4,
-                );
-                        $rows4[] = $comments;
-                }
-            }
-            $rows5[] = array(
-                "Total_likes"=>"$totalLiked",
-                "total_offers"=>"$totaloffers",
-                "total_exchange_request"=>"$total_exchange_request",
-                "total_comments"=>"$total_comments",
-            );
-            // $data[] = $rows5;
-            return $rows5;
+        $query2 = "SELECT * FROM ".$this->likes_table." WHERE list_id = '$this->listing_id'";
+        $result2 = mysqli_query($this->conn, $query2);
+        if ($result2) {
+            $totalLiked = mysqli_num_rows($result2);
         }
-        return array();
+        $query3 = "SELECT * FROM views WHERE listing_id = '$this->listing_id'";
+        $result3 = mysqli_query($this->conn, $query3);
+        if ($result3) {
+            $totalView = mysqli_num_rows($result3);
+            if ($totalView <= 20) {
+                $populrity='low';
+            }elseif ($totalView > 20 && $totalView < 30) {
+                $populrity='medium';
+            }else{
+                $populrity='high';
+            }
+                
+        }
+        $query4 = "SELECT * FROM exchange WHERE item = '$this->listing_id' OR item2 = '$this->listing_id'";
+        $result4 = mysqli_query($this->conn, $query4);
+        if ($result4) {
+            $totalExchange = mysqli_num_rows($result4);
+        }
+        $query5 = "SELECT * FROM offers WHERE listing_id = '$this->listing_id'";
+        $result5 = mysqli_query($this->conn, $query5);
+        if ($result5) {
+            $totalOffer = mysqli_num_rows($result5);
+        }
+        $query6 = "SELECT * FROM comments WHERE listing_id = '$this->listing_id'";
+        $result6 = mysqli_query($this->conn, $query6);
+        if ($result5) {
+            $totalComment = mysqli_num_rows($result6);
+        }
+        $query7 = "SELECT * FROM views WHERE listing_id = '$this->listing_id'";
+        $result7 = mysqli_query($this->conn, $query7);
+        if ($result7) {
+            $array=array();
+            $total_city = 0;
+            while ($city = mysqli_fetch_assoc($result7)) {
+                $user_id = $city["user_id"];
+                $query07 = "SELECT * FROM logins WHERE id = '$user_id'";
+                $result07 = mysqli_query($this->conn, $query07);
+                $user_data = mysqli_fetch_assoc($result07);
+                $vist_city = $user_data["city"];
+                $country = $user_data["country"];
+                $array[]=array(
+                    "city"=>$vist_city,
+                    "country"=>$country,
+                    "count"=>1
+                );
+              }
+
+              $total_visited_city = array();
+              foreach ($array as $row) {
+                $found = false;
+                foreach ($total_visited_city as &$result) {
+                    if ($result["city"] == $row["city"] && $result["country"] == $row["country"]) {
+                        $result["count"]++;
+                        $found = true;
+                        break;
+                    }
+                }
+                if (!$found) {
+                    $total_visited_city[] = array(
+                        "city" => $row["city"],
+                        "country" => $row["country"],
+                        "count" => 1
+                    );
+                $total_city++;
+                }
+            }
+              
+        }
+        $abc=$total_visited_city;
+        function compareCounts($a, $b) {
+            return $b['count'] - $a['count'];
+        }
+        usort($abc, 'compareCounts');
+        $abc = array_map(function($city) {
+            unset($city['count']);
+            return $city;
+        }, $abc);
+        $topFive = array_slice($abc, 0, 5);
+        return array(
+            "tatal_like"=>$totalLiked,
+            "tatal_view"=>$totalView,
+            "tatal_Exchange"=>$totalExchange,
+            "tatal_comments"=>$totalComment,
+            "popularity"=>$populrity,
+            "Total_Visted_City"=>$total_city,
+            "most_visted"=>$topFive,
+        );
+        
     }
     public function WeeklyInsightList(){
         $query = "SELECT * FROM ".$this->listing." WHERE user_id = '$this->user_id'";

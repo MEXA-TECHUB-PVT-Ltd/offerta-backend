@@ -21,6 +21,9 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         $user_obj->user_id=$data->user_id;
         $user_obj->list_id=$data->listing_id;
         if ($user_obj->createView()) {
+            $user_obj->id=$user_obj->list_id;
+            $view=$user_obj->getViewOnList();
+            $total=$view["total_views"];
             http_response_code(200);
             echo json_encode(array(
             "status"=>true,
@@ -28,6 +31,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
             "data"=>array(
                 "user_id"=> $user_obj->user_id,
                 "listing_id"=> $user_obj->list_id,
+                "total_view"=>$total
             )
         ));
         }else{

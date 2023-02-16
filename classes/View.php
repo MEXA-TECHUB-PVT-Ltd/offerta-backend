@@ -5,6 +5,8 @@ class View
     public $user_id;
     public $list_id;
     public $views;
+    public $city;
+    public $country;
     public $conn;
     public $Listing_table;
     public function __construct($db)

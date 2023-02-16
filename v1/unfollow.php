@@ -13,7 +13,6 @@ include_once("../classes/Like.php");
 // object
 $db= new Database();
 $connection=$db->connect();
-
 $user_obj = new Like($connection);
 if($_SERVER['REQUEST_METHOD'] === "POST"){
     $data =json_decode(file_get_contents("php://input"));
@@ -21,11 +20,16 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     $user_obj->user_id=$data->user_id;
     $user_obj->following_id=$data->following_id;
     if ($user_obj->UnFollow()) {
-        $last_id=mysqli_insert_id($connection);
+        $user_obj->id = $user_obj->user_id;
+                $row3 = $user_obj->searchById();
+                $user_obj->id = $user_obj->following_id;
+                $row4 = $user_obj->searchById();
         http_response_code(200);
         echo json_encode(array(
             "status"=>true,
-            "message"=>"You have Successfully unfollow"
+            "message"=>"You have Successfully unfollow",
+            "user"=>$row3,
+            "following_user"=>$row4,
     ));
     }else{
         http_response_code(200);

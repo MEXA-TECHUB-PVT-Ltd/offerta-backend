@@ -23,11 +23,17 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     if ($user_obj->CheckFollow()) {
         # code...
     if ($user_obj->Follow()) {
+                $user_obj->id = $user_obj->user_id;
+                $row3 = $user_obj->searchById();
+                $user_obj->id = $user_obj->following_id;
+                $row4 = $user_obj->searchById();
         $last_id=mysqli_insert_id($connection);
         http_response_code(200);
         echo json_encode(array(
             "status"=>true,
-            "message"=>"You have Successfully following"
+            "message"=>"You have Successfully following",
+            "user"=>$row3,
+            "following_user"=>$row4,
     ));
     }else{
         http_response_code(200);
@@ -37,10 +43,16 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     ));
         }
     }else{
+        $user_obj->id = $user_obj->user_id;
+        $row3 = $user_obj->searchById();
+        $user_obj->id = $user_obj->following_id;
+        $row4 = $user_obj->searchById();
         http_response_code(200);
         echo json_encode(array(
             "status"=>false,
-            "message"=>"Already Following"
+            "message"=>"Already Following",
+            "user"=>$row3,
+            "following_user"=>$row4,
     ));
     }
 }else{

@@ -16,10 +16,12 @@ $connection=$db->connect();
 
 $user_obj = new Users($connection);
 
-if (isset($_POST["email"]) && isset($_POST["username"]) && isset($_POST["fullName"])) {
+if (isset($_POST["email"]) && isset($_POST["username"]) && isset($_POST["fullName"]) && isset($_POST["city"]) && isset($_POST["country"])) {
 $user_obj->email=$_POST["email"];
 $user_obj->username=$_POST["username"];
 $user_obj->full_name=$_POST["fullName"];
+$user_obj->country=$_POST["country"];
+$user_obj->city=$_POST["city"];
 if(!empty($_FILES["profile"]["name"])){
     // img
     $fileName  =  $_FILES['profile']['name']; 

@@ -18,8 +18,8 @@ $connection=$db->connect();
 
 $user_obj = new Promotion($connection);
 if($_SERVER['REQUEST_METHOD'] === "GET"){
-    if (!empty($_GET["user_id"])){
-        $user_id = $_GET["user_id"];
+    if (!empty($_GET["id"])){
+        $user_id = $_GET["id"];
         $user_obj->user_id=$user_id;
         if ($row=$user_obj->getPromotionById()) {
             http_response_code(200);

@@ -17,25 +17,48 @@ $connection=$db->connect();
 $user_obj = new Promotion($connection);
 if($_SERVER['REQUEST_METHOD'] === "PUT"){
     $data =json_decode(file_get_contents("php://input"));
-    if (!empty($data->id) &&!empty($data->user_id) && !empty($data->feature_price) && !empty($data->features_id) && !empty($data->advertisement_detail_id)) {
+    if (!empty($data->user_id) && !empty($data->listing_id) && !empty($data->type)) {
+        if ($data->type == 'urgent'){
+            $feature=$user_obj->selectAllFeature();
+            $user_obj->features_id = $feature["id"];
+            $user_obj->ad_detail_id ="";
+        }else{
+            $user_obj->ad_detail_id = $data->promotion_type_id;
+            $user_obj->features_id = "";
+        }
         $user_obj->id=$data->id;
-        $user_obj->user_id=$data->user_id;
-        $user_obj->feature_price=$data->feature_price;
-        $user_obj->features_id=$data->features_id;
-        $user_obj->ad_detail_id=$data->advertisement_detail_id;
+        $user_obj->user_id = $data->user_id;
+        $user_obj->listing_id = $data->listing_id;
     if ($user_obj->UpdatePromotion()) {
+        $last_id=mysqli_insert_id($connection);
+        if (empty($user_obj->ad_detail_id)) {
+            $data2=array(
+                "id"=>$user_obj->id,
+                "user_id"=>"$data->user_id",
+                "listing_id"=>"$data->listing_id",
+                "type"=>"$data->type",
+                "promotion_type_id"=>"$data->promotion_type_id"
+            );
+        }else{
+            $data2=array(
+                "id"=>$user_obj->id,
+                "user_id"=>"$data->user_id",
+                "listing_id"=>"$data->listing_id",
+                "type"=>"advertisement",
+                "promotion_type_id"=>"$data->promotion_type_id"
+            );
+        }
         http_response_code(200);
         echo json_encode(array(
-        "data"=>$data,
+        "data"=>$data2,
         "status"=>true,
         "Message"=>"Promotion Updated"
-        
     ));
         }else{
             http_response_code(200);
             echo json_encode(array(
             "status"=>false,
-            "Message"=>"Promotion Fail to Update"
+            "Message"=>"Promotion Failed to Updated"
         ));
             }
     }else{

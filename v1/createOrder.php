@@ -30,7 +30,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
                 "sale_by"=>$data->sale_by,
                 "order_by"=>$data->order_by,
                 "listing_id"=>$data->listing_id,
-                "shipping_id"=>$data->shipping_id
+                "shipping_id"=>$data->shipping_id,
+                "status"=>"pending"
             );
             http_response_code(200);
             echo json_encode(array(

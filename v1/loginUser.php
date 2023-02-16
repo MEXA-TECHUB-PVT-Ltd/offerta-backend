@@ -21,17 +21,26 @@ $data =json_decode(file_get_contents("php://input"));
 if(!empty($data->email) && !empty($data->password)){
 $user_obj->email=$data->email;
  $user_obj->password=$data->password;
- 
-//  $row=$user_obj->searchByEmail();
+
  if(!empty($row=$user_obj->searchByEmail())){
  $passwordFetch = $row["password"];
+ $status = $row["status"];
 if (password_verify($user_obj->password,$passwordFetch)) {
+    if ($status == 'active' || $status == '') {
+        # code...
     http_response_code(200);
     echo json_encode(array(
         "data"=>$row,
         "status"=>true,
         "message"=>"Login Successful"
     ));
+}else{
+    http_response_code(200);
+    echo json_encode(array(
+        "status"=>false,
+        "message"=>"User Account is block"
+    ));
+}
 }else{
         http_response_code(200);
     echo json_encode(array(

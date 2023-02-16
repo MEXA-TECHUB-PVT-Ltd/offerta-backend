@@ -1,0 +1,123 @@
+[18-Oct-2022 20:29:47 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 7
+[18-Oct-2022 20:29:47 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 8
+[18-Oct-2022 20:29:47 Asia/Karachi] PHP Notice:  Undefined variable:  in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 16
+[18-Oct-2022 20:29:47 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_s19d3Q6uQne7pA) You passed an empty string for 'payment_method_types[0]'. We assume empty values are an attempt to unset a parameter; however 'payment_method_types[0]' cannot be unset. You should remove 'payment_method_types[0]' from your request or supply a non-empty value.
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[18-Oct-2022 20:30:41 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 7
+[18-Oct-2022 20:30:41 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 8
+[18-Oct-2022 20:30:41 Asia/Karachi] PHP Notice:  Undefined variable:  in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 16
+[18-Oct-2022 20:30:41 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_l7LWExIlNn1jjw) You passed an empty string for 'payment_method_types[0]'. We assume empty values are an attempt to unset a parameter; however 'payment_method_types[0]' cannot be unset. You should remove 'payment_method_types[0]' from your request or supply a non-empty value.
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[18-Oct-2022 20:31:16 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 7
+[18-Oct-2022 20:31:16 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 8
+[18-Oct-2022 20:31:16 Asia/Karachi] PHP Notice:  Undefined variable:  in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 16
+[18-Oct-2022 20:31:16 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_EgXA6VCXVuK754) You passed an empty string for 'payment_method_types[0]'. We assume empty values are an attempt to unset a parameter; however 'payment_method_types[0]' cannot be unset. You should remove 'payment_method_types[0]' from your request or supply a non-empty value.
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[18-Oct-2022 20:31:34 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 7
+[18-Oct-2022 20:31:34 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 8
+[18-Oct-2022 20:31:35 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_7gHha26lYo0huy) You passed an empty string for 'payment_method_types[0]'. We assume empty values are an attempt to unset a parameter; however 'payment_method_types[0]' cannot be unset. You should remove 'payment_method_types[0]' from your request or supply a non-empty value.
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[18-Oct-2022 20:31:59 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 7
+[18-Oct-2022 20:31:59 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 8
+[18-Oct-2022 20:32:14 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 7
+[18-Oct-2022 20:32:14 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 8
+[18-Oct-2022 20:32:14 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_CNUObvkfqezzmG) Invalid currency: . Stripe currently supports these currencies: usd, aed, afn, all, amd, ang, aoa, ars, aud, awg, azn, bam, bbd, bdt, bgn, bhd, bif, bmd, bnd, bob, brl, bsd, bwp, byn, bzd, cad, cdf, chf, clp, cny, cop, crc, cve, czk, djf, dkk, dop, dzd, egp, etb, eur, fjd, fkp, gbp, gel, gip, gmd, gnf, gtq, gyd, hkd, hnl, hrk, htg, huf, idr, ils, inr, isk, jmd, jod, jpy, kes, kgs, khr, kmf, krw, kwd, kyd, kzt, lak, lbp, lkr, lrd, lsl, mad, mdl, mga, mkd, mmk, mnt, mop, mro, mur, mvr, mwk, mxn, myr, mzn, nad, ngn, nio, nok, npr, nzd, omr, pab, pen, pgk, php, pkr, pln, pyg, qar, ron, rsd, rub, rwf, sar, sbd, scr, sek, sgd, shp, sle, sll, sos, srd, std, szl, thb, tjs, tnd, top, try, ttd, twd, tzs, uah, ugx, uyu, uzs, vnd, vuv, wst, xaf, xcd, xof, xpf, yer, zar, zmw, usdc, btn, ghs, eek, lvl, svc, vef, ltl
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[18-Oct-2022 15:32:44 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 5
+[18-Oct-2022 15:32:44 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 6
+[18-Oct-2022 15:32:44 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_apvcLw5YEZAis4) Invalid currency: . Stripe currently supports these currencies: usd, aed, afn, all, amd, ang, aoa, ars, aud, awg, azn, bam, bbd, bdt, bgn, bhd, bif, bmd, bnd, bob, brl, bsd, bwp, byn, bzd, cad, cdf, chf, clp, cny, cop, crc, cve, czk, djf, dkk, dop, dzd, egp, etb, eur, fjd, fkp, gbp, gel, gip, gmd, gnf, gtq, gyd, hkd, hnl, hrk, htg, huf, idr, ils, inr, isk, jmd, jod, jpy, kes, kgs, khr, kmf, krw, kwd, kyd, kzt, lak, lbp, lkr, lrd, lsl, mad, mdl, mga, mkd, mmk, mnt, mop, mro, mur, mvr, mwk, mxn, myr, mzn, nad, ngn, nio, nok, npr, nzd, omr, pab, pen, pgk, php, pkr, pln, pyg, qar, ron, rsd, rub, rwf, sar, sbd, scr, sek, sgd, shp, sle, sll, sos, srd, std, szl, thb, tjs, tnd, top, try, ttd, twd, tzs, uah, ugx, uyu, uzs, vnd, vuv, wst, xaf, xcd, xof, xpf, yer, zar, zmw, usdc, btn, ghs, eek, lvl, svc, vef, ltl
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[18-Oct-2022 15:33:09 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 5
+[18-Oct-2022 15:33:09 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 6
+[18-Oct-2022 15:33:37 UTC] PHP Notice:  Undefined index: paymentMethodType in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 5
+[21-Oct-2022 09:12:55 UTC] PHP Notice:  Undefined index: paymentMethodType in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 6
+[21-Oct-2022 09:12:56 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_LheqBdoPQFUuMJ) The payment method type "Card" is invalid. Please ensure the provided type is activated in your dashboard (https://dashboard.stripe.com/account/payments/settings) and your account is enabled for any preview features that you are trying to use.
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[21-Oct-2022 09:12:57 UTC] PHP Notice:  Undefined index: paymentMethodType in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 6
+[21-Oct-2022 09:12:58 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_ZNhzYurk4kfoXR) The payment method type "Card" is invalid. Please ensure the provided type is activated in your dashboard (https://dashboard.stripe.com/account/payments/settings) and your account is enabled for any preview features that you are trying to use.
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[21-Oct-2022 09:13:58 UTC] PHP Notice:  Undefined index: paymentMethodType in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 6
+[21-Oct-2022 09:13:59 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_LSfkV0Gq8I11S4) The payment method type "Card" is invalid. Please ensure the provided type is activated in your dashboard (https://dashboard.stripe.com/account/payments/settings) and your account is enabled for any preview features that you are trying to use.
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[21-Oct-2022 09:14:39 UTC] PHP Notice:  Undefined index: paymentMethodType in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 6
+[21-Oct-2022 09:15:34 UTC] PHP Notice:  Undefined index: paymentMethodType in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 6
+[21-Oct-2022 09:16:51 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-payment-intent.php on line 6
+[21-Oct-2022 09:16:52 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_XhTWYQTm6jjgku) Invalid currency: . Stripe currently supports these currencies: usd, aed, afn, all, amd, ang, aoa, ars, aud, awg, azn, bam, bbd, bdt, bgn, bhd, bif, bmd, bnd, bob, brl, bsd, bwp, byn, bzd, cad, cdf, chf, clp, cny, cop, crc, cve, czk, djf, dkk, dop, dzd, egp, etb, eur, fjd, fkp, gbp, gel, gip, gmd, gnf, gtq, gyd, hkd, hnl, hrk, htg, huf, idr, ils, inr, isk, jmd, jod, jpy, kes, kgs, khr, kmf, krw, kwd, kyd, kzt, lak, lbp, lkr, lrd, lsl, mad, mdl, mga, mkd, mmk, mnt, mop, mro, mur, mvr, mwk, mxn, myr, mzn, nad, ngn, nio, nok, npr, nzd, omr, pab, pen, pgk, php, pkr, pln, pyg, qar, ron, rsd, rub, rwf, sar, sbd, scr, sek, sgd, shp, sle, sll, sos, srd, std, szl, thb, tjs, tnd, top, try, ttd, twd, tzs, uah, ugx, uyu, uzs, vnd, vuv, wst, xaf, xcd, xof, xpf, yer, zar, zmw, usdc, btn, ghs, eek, lvl, svc, vef, ltl
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[23-Oct-2022 09:23:37 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_COtYY0sQhGS53N) Amount must be at least $0.50 usd
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[16-Nov-2022 12:32:38 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_GLvdT6cY7VA3gB) This value must be greater than or equal to 1.
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[16-Nov-2022 12:32:53 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_vDMto57h3wUuTv) This value must be greater than or equal to 1.
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[16-Nov-2022 15:20:27 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/getAuthorPublishableKey.php on line 26
+[16-Nov-2022 15:20:35 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/getAuthorPublishableKey.php on line 26
+[16-Nov-2022 20:49:17 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 10
+[16-Nov-2022 20:49:17 Asia/Karachi] PHP Fatal error:  Uncaught Stripe\Exception\InvalidArgumentException: api_key cannot be the empty string in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php:264
+Stack trace:
+#0 /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php(59): Stripe\BaseStripeClient->validateConfig(Array)
+#1 /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php(20): Stripe\BaseStripeClient->__construct(Array)
+#2 {main}
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php on line 264
+[16-Nov-2022 20:50:20 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 10
+[16-Nov-2022 20:50:20 Asia/Karachi] PHP Fatal error:  Uncaught Stripe\Exception\InvalidArgumentException: api_key cannot be the empty string in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php:264
+Stack trace:
+#0 /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php(59): Stripe\BaseStripeClient->validateConfig(Array)
+#1 /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php(19): Stripe\BaseStripeClient->__construct(Array)
+#2 {main}
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php on line 264
+[16-Nov-2022 20:52:06 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 10
+[16-Nov-2022 20:52:06 Asia/Karachi] PHP Fatal error:  Uncaught Stripe\Exception\InvalidArgumentException: api_key cannot be the empty string in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php:264
+Stack trace:
+#0 /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php(59): Stripe\BaseStripeClient->validateConfig(Array)
+#1 /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php(19): Stripe\BaseStripeClient->__construct(Array)
+#2 {main}
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php on line 264
+[16-Nov-2022 20:52:55 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 10
+[16-Nov-2022 20:52:56 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_lQyEqEztZ3y96g) Invalid integer: 
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[16-Nov-2022 20:53:44 Asia/Karachi] PHP Fatal error:  Uncaught Error: Class 'Stripe\StripeClient' not found in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 19
+[16-Nov-2022 20:54:15 Asia/Karachi] PHP Fatal error:  Uncaught Error: Class 'Stripe\StripeClient' not found in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 19
+[16-Nov-2022 20:54:25 Asia/Karachi] PHP Fatal error:  Uncaught Error: Class 'Stripe\StripeClient' not found in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 19
+[16-Nov-2022 15:55:37 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 6
+[16-Nov-2022 15:55:37 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 7
+[16-Nov-2022 15:55:37 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_XLYMl0xPTUgW83) Invalid integer: 
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[16-Nov-2022 16:00:20 UTC] PHP Notice:  Undefined variable: conn in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 11
+[16-Nov-2022 16:00:20 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 11
+[16-Nov-2022 16:00:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 13
+[16-Nov-2022 16:00:21 UTC] PHP Fatal error:  Uncaught (Status 400) (Request req_xAKroXgNI8udoV) Invalid integer: 
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[16-Nov-2022 16:00:56 UTC] PHP Notice:  Undefined variable: conn in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 12
+[16-Nov-2022 16:00:56 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 12
+[16-Nov-2022 16:00:56 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 14
+[16-Nov-2022 21:04:46 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 8
+[16-Nov-2022 21:04:46 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 9
+[16-Nov-2022 21:04:46 Asia/Karachi] PHP Notice:  Trying to access array offset on value of type null in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php on line 10
+[16-Nov-2022 21:04:46 Asia/Karachi] PHP Fatal error:  Uncaught Stripe\Exception\InvalidArgumentException: api_key cannot be the empty string in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php:264
+Stack trace:
+#0 /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php(59): Stripe\BaseStripeClient->validateConfig(Array)
+#1 /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/create-author-payment-intent.php(22): Stripe\BaseStripeClient->__construct(Array)
+#2 {main}
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/BaseStripeClient.php on line 264
+[26-Nov-2022 00:11:42 Asia/Karachi] PHP Notice:  Undefined index: author_id in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/getAuthorPublishableKey.php on line 9
+[26-Nov-2022 00:11:54 Asia/Karachi] PHP Notice:  Undefined index: author_id in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/getAuthorPublishableKey.php on line 9
+[26-Nov-2022 00:11:57 Asia/Karachi] PHP Notice:  Undefined index: author_id in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/getAuthorPublishableKey.php on line 9
+[26-Nov-2022 00:12:31 Asia/Karachi] PHP Notice:  Undefined index: author_id in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/getAuthorPublishableKey.php on line 9
+[26-Nov-2022 00:17:00 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_7VMTzqypG83aVV) Amount must be at least $0.50 usd
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[26-Nov-2022 00:17:43 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_Q9fvP2y5qjMjQi) Amount must be at least $0.50 usd
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[26-Nov-2022 00:18:32 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_jNil7X1R59lQtp) Amount must be at least $0.50 usd
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
+[26-Nov-2022 00:19:33 Asia/Karachi] PHP Fatal error:  Uncaught (Status 400) (Request req_pR63rE1Ww14Onw) Amount must be at least $0.50 usd
+  thrown in /home/xvsstbyn3agl/public_html/reportSv/api/charge-payment/stripe-php/lib/Exception/ApiErrorException.php on line 38
