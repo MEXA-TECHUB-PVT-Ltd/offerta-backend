@@ -36,6 +36,13 @@ if(empty($data->email)){
         "message"=>"Email is not valid"
     ));
 }
+elseif(empty($data->role)){
+    http_response_code(200);
+    echo json_encode(array(
+        "status"=>false,
+        "message"=>"Select role as user or company"
+    ));
+}
 elseif(empty($data->password)){
     http_response_code(200);
     echo json_encode(array(
@@ -59,15 +66,18 @@ elseif(empty($data->conformPassword)){
 } 
 elseif (!empty($data)) {
 $user_obj->email=$data->email;
+$user_obj->role=$data->role;
 $user_obj->password=password_hash($data->password, PASSWORD_DEFAULT);
 if(empty($row=$user_obj->searchByEmail())){
     if($user_obj->create_user()){
         $row2=$user_obj->searchByEmail();
         $id=$row2["id"];
         $email=$row2["email"];
+        $role=$row2["role"];
         $data2=array(
             "id"=>$id,
             "email"=>$email,
+            "role"=>$role,
             "password"=>$data->password
         );
             http_response_code(200);
