@@ -8,8 +8,11 @@ class Users{
     public $photo;
     public $full_name;
     public $city;
+    public $role;
     public $country;
     public $code;
+    public $cnic;
+    public $live_image;
     public $conn;
     public $created_at;
     public $user_table;
@@ -19,7 +22,7 @@ class Users{
         $this->created_at = date("Y-m-d h:i");
     }
     public function create_user(){
-        $query = "INSERT INTO ".$this->user_table." (email,password,email_verified_status,created_at) VALUES ('$this->email','$this->password','false','$this->created_at')";
+        $query = "INSERT INTO ".$this->user_table." (email,password,email_verified_status,role,created_at) VALUES ('$this->email','$this->password','false','$this->role','$this->created_at')";
 
     $insert = mysqli_query($this->conn, $query);
         if($insert){
@@ -142,10 +145,30 @@ class Users{
             }else{
                 $email = "";
             }
+            if (!empty($row["role"])) {
+                $role = $row["role"];
+            }else{
+                $role = "";
+            }
+            if ($row["subscription"] == 'true') {
+                $subscription = "subscribed";
+            }else{
+                $subscription = "not subscribed";
+            }
             if (!empty($row["location_address"])) {
                 $location_address = $row["location_address"];
             }else{
                 $location_address = "";
+            }
+            if (!empty($row["cnic"])) {
+                $cnic = $row["cnic"];
+            }else{
+                $cnic = "";
+            }
+            if (!empty($row["live_image"])) {
+                $live_image = $row["live_image"];
+            }else{
+                $live_image = "";
             }
             if (!empty($row["phone_no"])) {
                 $phone_no = $row["phone_no"];
@@ -202,6 +225,10 @@ class Users{
                 "location_address"=>$location_address,
                 "phone_no"=>$phone_no,
                 "email_verified_status"=>$email_verified_status,
+                "role"=>$role,
+                "subscription"=>$subscription,
+                "cnic"=>$cnic,
+                "live_image"=>$live_image,
                 "status"=>$status,
                 "review"=>$avarage,
                 "followers"=>$rows,
@@ -262,6 +289,11 @@ class Users{
             }else{
                 $phone_no = "";
             }
+            if (!empty($row["role"])) {
+                $role = $row["role"];
+            }else{
+                $role = "";
+            }
             if (!empty($row["email_verified_status"])) {
                 $email_verified_status = $row["email_verified_status"];
             }else{
@@ -301,12 +333,10 @@ class Users{
             }
             $query5 = "SELECT * FROM follow WHERE following_id=".$id;
             $result5 = mysqli_query($this->conn, $query5);
-                $rows=mysqli_num_rows($result5);
+            $rows=mysqli_num_rows($result5);
             $query6 = "SELECT * FROM follow WHERE user_id=".$id;
             $result6 = mysqli_query($this->conn, $query6);
-                $rows2=mysqli_num_rows($result6);
-            
-                    # code...
+            $rows2=mysqli_num_rows($result6);
             $array = array(
                 "id"=>$id,
                 "full_name"=>$full_name,
@@ -320,6 +350,7 @@ class Users{
                 "phone_no"=>$phone_no,
                 "email_verified_status"=>$email_verified_status,
                 "status"=>$status,
+                "role"=>$role,
                 "review"=>$avarage,
                 "followers"=>$rows,
                 "following"=>$rows2,
@@ -511,6 +542,33 @@ public function selectPrivacyPolicy(){
 }
 
 return array();
+}
+// account Fees
+public function getAccountFees(){
+        $query2 = "SELECT * FROM fee_configuration LIMIT 1";
+        $result2 = mysqli_query($this->conn, $query2);
+        if ($result2) {
+        $r2 = mysqli_fetch_assoc($result2);
+        $array =array(
+            "company_fee"=>$r2["company_fee"],
+            "user_fee"=>$r2["user_fee"]
+        );
+    return $array;
+}
+
+return array();
+}
+public function subscription(){
+    $query = "UPDATE ".$this->user_table." SET
+    subscription = 'true',
+    live_image = '$this->live_image',
+    cnic = '$this->cnic'
+    WHERE id ='$this->id'";
+$upload = mysqli_query($this->conn, $query);
+    if($upload){
+        return true;
+    }
+    return false;
 }
 }
 ?>

@@ -27,7 +27,6 @@ if(!empty($_FILES["profile"]["name"])){
     $fileName  =  $_FILES['profile']['name']; 
     $tempPath  =  $_FILES['profile']['tmp_name'];
     $fileSize  =  $_FILES['profile']['size'];
-   
 
     // img naming
     $rand= date("Ymd")."_".rand(10000,99999);
